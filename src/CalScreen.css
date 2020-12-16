@@ -1,0 +1,17 @@
+.result {
+    height: 90px;
+    background-color:aqua;
+    width: 100%;
+    margin:auto;
+    border-radius: 3%;
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+    -ms-border-radius: 3%;
+    -o-border-radius: 3%;
+}
+  
+  .result p {
+    font-size: 40px;
+    margin: 5px;
+  
+  }
