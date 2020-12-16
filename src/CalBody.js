@@ -22,7 +22,7 @@ const CalBody=(props)=>{
                 <button name="8" onClick={buttonPressed}>8</button>
                 <button name="9" onClick={buttonPressed}>9</button>
                 <button name="0" onClick={buttonPressed}>0</button>
-                <button name="+" onClick={buttonPressed}>+</button>
+                <button name= "+" onClick={buttonPressed}>+</button>
                 <button name="-" onClick={buttonPressed}>-</button>
                 <button name="*" onClick={buttonPressed}>*</button>
                 <button name="/" onClick={buttonPressed}>/</button>
