@@ -9,20 +9,40 @@ class App extends Component{
     result:''
   }
  
-  buttonpressed=(buttonname)=>{
+  buttonPressed=(buttonName)=>{
     
-    if(buttonname==='='){
+    if(buttonName==='='){
       this.calculate();
     }
-    else if(buttonname==='X'){
+    else if(buttonName==='X'){
       this.delete();
     }
-    else if(buttonname==='CE'){
+    else if(buttonName==='CE'){
+      console.log('mann');
       this.cancel();
     }
+    else if(buttonName==='sq'){
+     
+      let num=Number(this.state.result);
+      let ans=String(Math.pow(num,2));
+      this.setState({result:ans})
+    }
+    else if(buttonName==='cube'){
+     
+      let num=Number(this.state.result);
+      let ans=String(Math.pow(num,3));
+      this.setState({result:ans})
+    }
+    else if(buttonName==='sqrt'){
+     
+      let num=Number(this.state.result);
+      let ans=String(Math.sqrt(num));
+      this.setState({result:ans})
+    }
+
     else{
     this.setState({
-      result:this.state.result+buttonname
+      result:this.state.result+buttonName
     })
     }
   }
@@ -31,9 +51,9 @@ class App extends Component{
   }
   delete=()=>{
     let results=this.state.result;
-    let finalresult=results.slice(0, -1);
+    let finalResult=results.slice(0, -1);
     this.setState({
-      result: finalresult
+      result: finalResult 
   })
   }
   calculate=()=>{
@@ -65,7 +85,7 @@ class App extends Component{
         <br/>
         <div className='calculator-body'>
         <CalScreen result={this.state.result}/>
-        <CalBody buttonpressed={this.buttonpressed}/>
+        <CalBody buttonPressed={this.buttonPressed}/>
         </div>
       </div>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import './CalScreen.css';
-const CalScreen=(props)=>{
+const calScreen=(props)=>{
 return(
 
     <div className='result'>
@@ -11,4 +11,4 @@ return(
 );
 }
 
-export default CalScreen;
+export default calScreen;
